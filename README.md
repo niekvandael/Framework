@@ -10,8 +10,8 @@ Demo available at ASIST office (www.asist.be)
 ![Validation](https://raw.githubusercontent.com/niekvandael/Framework/master/Frontend/screenshots/demo/validation.png)  
   
 ## CEFETRA screenshots ##
-![Contract](https://raw.githubusercontent.com/niekvandael/Framework/master/Frontend/screenshots/CEFETRA/editableList.png)  
-![Import](https://raw.githubusercontent.com/niekvandael/Framework/master/Frontend/screenshots/CEFETRA/import.png)  
-![Planning](https://raw.githubusercontent.com/niekvandael/Framework/master/Frontend/screenshots/CEFETRA/planning_recon.png)  
-![Web](https://raw.githubusercontent.com/niekvandael/Framework/master/Frontend/screenshots/CEFETRA/web.png)  
-![Web tax](https://raw.githubusercontent.com/niekvandael/Framework/master/Frontend/screenshots/CEFETRA/web_tax.png)  
+![Contract](https://raw.githubusercontent.com/niekvandael/Framework/master/Frontend/screenshots/cefetra/editableList.png)  
+![Import](https://raw.githubusercontent.com/niekvandael/Framework/master/Frontend/screenshots/cefetra/import.png)  
+![Planning](https://raw.githubusercontent.com/niekvandael/Framework/master/Frontend/screenshots/cefetra/planning_recon.png)  
+![Web](https://raw.githubusercontent.com/niekvandael/Framework/master/Frontend/screenshots/cefetra/web.png)  
+![Web tax](https://raw.githubusercontent.com/niekvandael/Framework/master/Frontend/screenshots/cefetra/web_tax.png)  
