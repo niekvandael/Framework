@@ -1,0 +1,46 @@
+<div class="wrapper" data-dojo-attach-event="onkeyup:handleKeys" data-dojo-attach-point="containerNode">
+	<div class="listContainer"><div data-dojo-type="dijit/form/Form" id="${id}form" >
+		<div data-dojo-ty  pe="dijit/layout/TabContainer" style="width: 100%; height:252px;">
+		  <div data-dojo-type="dijit/layout/ContentPane" title="${i18n.GENERAL}" data-dojo-props="selected:true" tabindex="-1">
+		     <table class="column-layout" tabindex="-1">
+				<tr>
+					<td><label for="${id}OrderNUMBER">${i18n.ORDERNUMBER}</label></td>
+					<td><input data-dojo-type="custom.NumberTextBox" id="${id}ORDERNUMBER" class="field-max-width-15" data-dojo-props="constraints:${constraint.DECIMAL_16_0}"  required="false" uppercase="false" maxlength="15" /></td>
+				</tr>
+				
+				<tr>
+					<td><label for="${id}ORDERDATE">${i18n.ORDERDATE}</label></td>
+					<td><input data-dojo-type="custom.UTCDateTextBox" id="${id}ORDERDATE" class="field-max-width-45" required="true" uppercase="false" maxlength="50"/></td>
+				</tr>
+				
+				<tr>
+					<td><label for="${id}REQUIREDDATE">${i18n.REQUIREDDATE}</label></td>
+					<td><input data-dojo-type="custom.UTCDateTextBox" id="${id}REQUIREDDATE" class="field-max-width-45" required="true" uppercase="false" maxlength="50"/></td>
+				</tr>
+				
+				<tr>
+					<td><label for="${id}SHIPPEDDATE">${i18n.SHIPPEDDATE}</label></td>
+					<td><input data-dojo-type="custom.UTCDateTextBox" id="${id}SHIPPEDDATE" class="field-max-width-45" required="true" uppercase="false" maxlength="50"/></td>
+				</tr>
+				
+				<tr>
+					<td><label for="${id}STATUS">${i18n.STATUS}</label></td>
+					<td><input data-dojo-type="custom.ValidationTextBox" id="${id}STATUS" class="field-max-width-45" required="true" uppercase="false" maxlength="50"/></td>
+				</tr>
+				
+				<tr>
+					<td><label for="${id}COMMENTS">${i18n.COMMENTS}</label></td>
+					<td><textarea data-dojo-type="dijit/form/SimpleTextarea" id="${id}COMMENTS" class="field-max-width-20" rows="4" maxlength="100"></textarea></td>
+					
+				</tr>
+				
+				<tr>
+					<td><label for="${id}CUSTOMERNUMBER">${i18n.CUSTOMER}</label></td>
+					<td><select title="${i18n.CUSTOMERNUMBER}" data-dojo-type="custom.FilteringSelect" class="field-max-width-45" id="${id}CUSTOMERNUMBER" data-dojo-props="store: COMBOBOX.getCustomerValues(this, 'CUSTOMERNUMBER'), maxLength:50"></select></td>
+				</tr>
+			</table>
+		  </div>
+	  </div>
+  </div>
+  </div><div data-dojo-type="custom.DetailActionBar" data-dojo-props="parentId:'${id}', attachScope:this"></div>
+</div>

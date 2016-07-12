@@ -1,0 +1,9 @@
+<div class="dijit dijitReset dijitInline dijitLeft" role="presentation" style="height: 19px !important;" id="widget_${id}">
+	<div class='dijitReset dijitValidationContainer'>
+		<input class="dijitReset dijitInputField dijitValidationIcon dijitValidationInner" value="${value}" type="text" tabIndex="-1" readonly="readonly" role="presentation" />
+	</div>
+	<div class="dijitReset dijitInputField dijitInputContainer"  style="height: 19px !important;">
+		<input class="dijitReset dijitInputInner" data-dojo-attach-event="onkeyup:handleKeys" data-dojo-attach-point='textbox,focusNode' autocomplete="off" id="${id}" type='text' style="width: calc(100% - 19px) !important; height: 19px !important;" />
+		<img data-dojo-attach-point="lookupAction" data-dojo-attach-event="ondijitclick:showPopup" src="/core/widgets/images/lookupicon.png" alt="Lookup" style="display: inline-block; width: 19px; height: 19px; cursor: pointer;" />
+	</div>
+</div>

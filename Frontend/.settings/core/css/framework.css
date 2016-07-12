@@ -1,0 +1,977 @@
+/**
+ * CREATED BY NVD ON 1-apr.-2014 13:57:41
+ *
+ * Package    : core/css
+ * Filename   : cefetra.css
+*/
+
+@CHARSET "ISO-8859-1";
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Condensed Regular'), local('RobotoCondensed-Regular'), url(font/Zd2E9abXLFGSr9G3YK2MsFzqCfRpIA3W6ypxnPISCPA.woff) format('woff');
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-family: 'Roboto Condensed';
+	font-size: 14px;
+}
+
+*, html {
+	outline: none !important;
+}
+
+.logo{
+	height: 20px;
+	width: auto;
+}
+
+.tundra .dojoxGridRowOver{
+	cursor: pointer;
+}
+
+.dijitNumberTextBox{
+    text-align: right !important;
+}
+
+/* Column width fix  */
+.tundra .dojoxGridRowTable .dojoDndHorizontal th.dojoDndItem{
+	padding: 0 !important;
+	text-overflow: ellipsis;
+}
+
+/* ColumnOver width fix  */
+.tundra .dojoxGridCellOver .dojoxGridSortNode, .tundra .dojoxGridCellSortFocus .dojoxGridSortNode, .tundra .dojoxGridSingleSorted .dojoxGridHeader .dojoxGridCellOver .dojoxGridSortNodeMain, .tundra .dojoxGridSingleSorted .dojoxGridHeader .dojoxGridCellSortFocus .dojoxGridSortNodeMain{
+	margin-right: 12px !important;
+}
+
+.dojoxGrid .dojoxGridSortNode{
+   text-overflow: ellipsis !important;
+   max-height: 16px !important;
+   overflow: hidden;
+   white-space: nowrap;
+}
+
+.dojoxGridColCaption{
+	overflow: visible !important;
+}
+
+pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+.string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+
+.null { color: magenta; }
+.key { color: red; }
+
+.appConfirmDialog {
+    min-width:150px;
+}
+.appConfirmDialog .appDialogPaneButtons,
+.appConfirmDialog .dijitDialogPaneContent {
+    text-align:center;
+    background: #fff;
+    padding-bottom: 10px;
+}
+
+/* Error dialog */
+.errorDialogIconContainer{
+	float: left;
+}
+
+.errorDialogContainer{
+	float: left;
+	width: 100%;
+	height: 100%;	
+}
+
+.dijitErrorDialogPaneContent{
+	padding: 5px;
+	width: 500px;
+	height: auto;
+	max-height: 200px;
+	overflow: auto;
+}
+
+.errorDialogContainer ul{
+	list-style-image:url('/core/widgets/images/warningicon.png');
+}
+
+.errorDialogTitle{
+	background-image:url('/core/widgets/images/error_icon.png');
+	background-size: 16px 16px;
+}
+
+.warningDialogTitle{
+	background-image:url('/core/widgets/images/warningicon.png');
+	background-size: 16px 16px;
+}
+
+.appDialogPaneButtons{
+	float: right;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+.iconHover{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+}
+
+.iconHover:hover{
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+}
+
+.editableCell{
+	border : 1px dotted black !important;
+}
+
+.dijitTitlePaneTitle, .dijitFieldsetTitle{
+	cursor : pointer !important;
+}
+
+.loader{
+	width: 32px;
+	float:left;
+	margin-left: 10px;
+	visibility: hidden;
+}
+
+.pageInformation{
+  margin-top: 6px;
+  color: #000;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+.dojoxDockNode {
+	padding-top: 5px;
+	height: 21px;
+}
+
+.actionBar div{
+	float: left;
+}
+
+.listGrid{
+	overflow: auto;
+	height: 100%;
+	position: relative;
+	width: 100%;
+	display: table-row;
+	margin-top: 10px;
+}
+
+.dijitContentPane.dijitBorderContainer-child.dijitBorderContainer-dijitContentPane.dijitBorderContainerPane.dijitAlignCenter{
+		padding: 0;
+}
+
+.dijitBorderContainer.dijitContainer.dijitLayoutContainer{
+	padding: 0;
+}
+
+.widgetContainer{
+	display: table; 
+  	width: 100%;
+	height: 100%;
+	padding-bottom: 70px;
+	box-sizing: border-box;
+}
+
+.search-criteria{
+	display: table-row;
+	height: 0;
+}
+
+.tableRow{
+	display: table-row;
+}
+
+.currencyCombobox{
+	width: 80px;
+}
+
+.defaultWidth{
+	width: 250px;
+}
+
+.defaultWidthWithSmallSelect{
+	width: 110px;
+}
+
+.alignRight{
+	float: right;
+}
+
+.alignTop{
+	vertical-align: top;
+}
+
+.labelMargin{
+	padding-right: 20px;
+}
+
+.defaultWidgetTopMargin{
+	margin-top: 20px !important;
+}
+
+.fieldSetTopAlign{
+	margin-top: -8px;
+}
+
+.fieldSetMarginLeft{
+	margin-left: 10px;
+}
+
+.defaultDetailTitlePane{
+	overflow: auto;
+}
+
+.tundra .dijitTitlePaneTitle.dijitTitlePaneTitleFixedOpen.dijitFixedOpen{
+	background: #0ea24c url(../../images/titleBar.png) !important;
+	color: white !important;
+	box-sizing: border-box;
+}
+
+.tundra .dijitTitlePaneTitle.dijitTitlePaneTitleOpen.dijitOpen{
+	background: #0ea24c url(../../images/titleBar.png) !important;
+	color: white !important;
+}
+
+.tundra .dijitTitlePaneTitle.dijitTitlePaneTitleClosed.dijitClosed{
+	background: #0ea24c url(../../images/titleBar.png) !important;
+	color: white !important;
+}
+
+.dijitTitlePane{
+	background-color: #e5e5e5;
+}
+
+.tundra .dojoxGridHeader .dojoxGridCell{
+	background: #EDEDED;
+}
+
+.tundra .dijitTitlePaneContentInner{
+	background: #F7F7F7;
+}
+
+.tundra .dijitAccordionTitle{
+	background: #FFFDF2;
+}
+
+.tundra .dijitAccordionTitleHover{
+	background: #f8fafd url("../../dojo/dijit/themes/tundra/images/accordionItemHover.gif") bottom repeat-x;
+}
+
+.dijitTitlePaneTitle.dijitTitlePaneTitleFixedClosed.dijitFixedClosed:hover{
+	background: #f8fafd url("../../dojo/dijit/themes/tundra/images/accordionItemHover.gif") bottom repeat-x !important;
+}
+
+.tundra .dijitAccordionTitleSelected{
+	background: url(../../images/accordionItemActive.png);
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.tundra .dijitTabContainerTop-dijitContentPane, .tundra .dijitTabContainerLeft-dijitContentPane, .tundra .dijitTabContainerBottom-dijitContentPane, .tundra .dijitTabContainerRight-dijitContentPane, .tundra .dijitAccordionContainer-dijitContentPane{
+	background: #F3F3F3;
+	width: calc(100% - 10px) !important;
+}
+
+.tundra .dijitTabContainerTop-dijitContentPane, .tundra .dijitTabContainerLeft-dijitContentPane, .tundra .dijitTabContainerBottom-dijitContentPane, .tundra .dijitTabContainerRight-dijitContentPane, .tundra .dijitAccordionContainer-dijitContentPane{
+	background: #F3F3F3;
+	width: calc(100% - 10px) !important;
+}
+
+.tundra .dijitTabContainerTopNone{
+	width: 100% !important;
+}
+
+#pageInformation{
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+.dojoxGridCell {
+	height: 20px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.drop_zone {
+	
+}
+
+.defaultContainer{
+	width: 100%;
+	height: 100%;
+}
+
+.normalButton span{
+	width: 100px;
+}
+
+.tundra .dijitButtonText{
+	padding: 0;
+}
+
+.largeButton span{
+	width: 175px;
+}
+
+.normalSelect{
+	width: 200px; 
+	height: 150px;
+}
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF TWO  */
+.span_2_of_2 {
+	width: 100%;
+}
+.span_1_of_2 {
+	width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col { 
+		margin: 1% 0 1% 0%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.span_2_of_2, .span_1_of_2 { width: 100%; }
+}
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  GRID OF EIGHT  */
+.span_8_of_8 {
+	width: 100%;
+}
+
+.span_7_of_8 {
+  	width: 87.3%;
+}
+
+.span_6_of_8 {
+  	width: 74.6%;
+}
+
+.span_5_of_8 {
+  	width: 61.9%;
+}
+
+.span_4_of_8 {
+  	width: 49.2%;
+}
+
+.span_3_of_8 {
+  	width: 36.5%;
+}
+
+.span_2_of_8 {
+  	width: 23.8%;
+}
+
+.span_1_of_8 {
+  	width: 11.1%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_8, .span_2_of_8, .span_3_of_8, .span_4_of_8, .span_5_of_8, .span_6_of_8, .span_7_of_8, .span_8_of_8 { width: 100%; }
+}
+
+nav ul ul {
+	display: none;
+}
+
+nav ul li:hover > ul {
+	display: block;
+}
+
+nav ul {
+	background: #116735;
+	color: #FFF;
+	padding: 0 20px;
+	margin:0;
+	list-style: none;
+	position: relative;
+	display: inline-table;
+}
+
+nav ul:after {
+	content: ""; 
+	clear: both; 
+	display: block;
+}
+
+nav ul li {
+	float: left;
+}
+
+nav ul li:hover {
+	background: #478963;
+}
+
+nav ul li:hover a {
+	color: #fff;
+}
+
+nav ul li a {
+	display: block; padding: 25px 40px;
+	color: #FFF;; text-decoration: none;
+	z-index:999;
+}
+
+nav ul ul {
+	background: #287548; border-radius: 0px; padding: 0;
+	position: absolute; top: 100%;
+	z-index:999;
+}
+
+nav ul ul li {
+	float: none; 
+	border-top: 1px solid #6b727c;
+	border-bottom: 1px solid #478963;
+	position: relative;
+	z-index:999;
+	color: #FFF;
+}
+
+nav ul ul li a {
+	padding: 15px 40px;
+	color: #fff;
+}	
+
+nav ul ul li a:hover {
+	background: #478963;
+}
+
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.form-xsmall .control-label {
+    width: 50px;
+    padding: 0;
+}
+
+.form-small .control-label {
+    width: 100px;
+    padding: 0;
+}
+
+.form-xsmall .col-xs-10{
+	width: 220px;
+	margin-bottom: 5px;
+}
+
+.form-small .controls {
+    margin-left: 120px;
+}
+
+.form-medium .control-label {
+    width: 180px;
+}
+
+.form-medium .controls {
+    margin-left: 200px;
+}
+
+.form-xlarge .control-label {
+    width: 240px;
+}
+
+.form-xlarge .controls {
+    margin-left: 260px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+.form-horizontal .control-label {
+	padding-top: 0px;
+}
+
+.form-horizontal .form-group {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.actionBar{
+	height: 30px;
+	background: #0ea24c;
+	margin: auto 0;
+	padding: 5px;
+	
+}
+
+.messageBar{
+	/*clear: both;*/
+	background: #CCC;
+	height: 30px;
+	padding: 0 5px;
+	pointer-events: none;
+}
+
+.actionBar button{
+  background-color: #FFF;
+  border: 0;
+  height: 30px;
+}
+
+
+button:hover{
+	cursor: pointer;
+}
+
+button:hover{
+	background-color: #CCC;
+}
+
+button[disabled]:hover{
+	background-color: #FFF;
+	cursor: not-allowed;
+}
+
+.tundra .dijitTabContainerTop-tabs, .tundra .dijitTabContainerBottom-tabs {
+	padding-left: 0;
+}
+
+.padding-top{
+	padding-top: 10px;
+}
+
+.dojoxFloatingPaneContent {
+	overflow: hidden;
+}
+
+.dijitDialogPaneContent{
+	width: 100%;
+	height: 100%;
+}
+
+.lookupDialog .dijitDialogPaneContent{
+		padding: 0;
+}
+
+.loginDialog .dijitDialogPaneContent{
+		padding: 0;
+		height: 120px;
+}
+
+#loginButton{
+	height: 32px;
+	width: 100%;
+	background: #009847;
+	border: 0;
+	color: #FFF;
+}
+
+#loginButton:hover{
+	background: #008040;
+}
+
+#loginButton[disabled]:hover{
+	background: #009847;
+}
+
+.listContainer{
+	padding: 10px 0;
+	width:100%;
+}
+
+.wrapper{
+	height: 100%;
+	position:relative;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.footer{
+	width: 100%;
+	height: 70px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.dojoxFloatingPaneCanvas{
+	width: 100% !important;
+}
+
+.dijitTabController{
+	width: 100% !important;
+}
+
+.tundra .dijitTabContainerTop-container{
+	width: calc(100% - 2px) !important;
+}
+
+.tundra .dijitTabSpacer{
+	width: 100% !important;
+}
+
+.column-layout{
+	padding: 0 5px 0;
+}
+
+.column-layout tr td:nth-child(odd){
+	white-space:nowrap;
+}
+
+.column-layout tr td:nth-child(even){
+	padding: 0 15px 0 5px;
+	width: 100%;
+}
+
+.column-layout tr td:nth-child(even).max-col-5{
+	width: 57px;
+}
+
+.column-layout tr td:nth-child(even).max-col-10{
+	width: 115px;
+}
+
+.column-layout tr td:nth-child(even).max-col-15{
+	width: 172px;
+}
+
+.column-layout tr td:nth-child(even).max-col-20{
+	width: 230px;
+}
+
+/**
+.column-layout tr td:nth-child(even).max-col-20-min{
+	width: 230px;
+	min-width: 134px;
+}
+*/
+
+.column-layout tr td:nth-child(even).max-col-25{
+	width: 287px;
+}
+
+.column-layout tr td:nth-child(even).max-col-30{
+	width: 345px;
+}
+
+/**
+.column-2-layout{
+	padding: 5px;
+	border: 1px solid red;
+}
+
+.column-2-layout tr td:nth-child(even){
+	padding: 0 15px 0 5px;
+	width: 100%;
+	border: 1px solid red;
+}
+
+.column-2-layout tr td:nth-child(odd){
+	white-space:nowrap;
+	border: 1px solid red;
+}
+
+.column-4-layout{
+	padding: 5px;
+	border: 1px solid red;
+}
+
+.column-4-layout tr td:nth-child(even){
+	border: 1px solid red;
+}
+
+.column-4-layout tr td:nth-child(even).max-col-5{
+	padding: 0 15px 0 5px;
+	width: 57px;
+	border: 1px solid red;
+}
+
+.column-4-layout tr td:nth-child(even).max-col-10{
+	padding: 0 15px 0 5px;
+	width: 115px;
+	border: 1px solid red;
+}
+
+.column-4-layout tr td:nth-child(even).max-col-15{
+	padding: 0 15px 0 5px;
+	width: 172px;
+	border: 1px solid red;
+}
+
+.column-4-layout tr td:nth-child(even).max-col-20{
+	padding: 0 15px 0 5px;
+	width: 230px;
+	border: 1px solid red;
+}
+
+.column-4-layout tr td:nth-child(even).max-col-20-min{
+	padding: 0 15px 0 5px;
+	width: 230px;
+	min-width: 134px;
+	border: 1px solid red;
+}
+
+.column-4-layout tr td:nth-child(even).max-col-25{
+	padding: 0 15px 0 5px;
+	width: 287px;
+	border: 1px solid red;
+}
+
+.column-4-layout tr td:nth-child(even).max-col-30{
+	padding: 0 15px 0 5px;
+	width: 345px;
+	border: 1px solid red;
+}
+
+.column-4-layout tr td:nth-child(odd){
+	white-space:nowrap;
+	border: 1px solid red;
+}
+
+.column-6-layout{
+	padding: 5px;
+	border: 1px solid red;
+}
+
+.column-6-layout tr td:nth-child(even){
+	border: 1px solid red;
+}
+
+.column-6-layout tr td:nth-child(even).max-col-5{
+	padding: 0 15px 0 5px;
+	width: 57px;
+	border: 1px solid red;
+}
+
+.column-6-layout tr td:nth-child(even).max-col-10{
+	padding: 0 15px 0 5px;
+	width: 115px;
+	border: 1px solid red;
+}
+
+.column-6-layout tr td:nth-child(even).max-col-15{
+	padding: 0 15px 0 5px;
+	width: 172px;
+	border: 1px solid red;
+}
+
+.column-6-layout tr td:nth-child(even).max-col-20{
+	padding: 0 15px 0 5px;
+	width: 230px;
+	border: 1px solid red;
+}
+
+.column-6-layout tr td:nth-child(even).max-col-25{
+	padding: 0 15px 0 5px;
+	width: 287px;
+	border: 1px solid red;
+}
+
+.column-6-layout tr td:nth-child(even).max-col-30{
+	padding: 0 15px 0 5px;
+	width: 345px;
+	border: 1px solid red;
+}
+
+.column-6-layout tr td:nth-child(odd){
+	white-space:nowrap;
+	border: 1px solid red;
+}
+
+.column-8-layout{
+	padding: 5px;
+	border: 1px solid red;
+}
+
+.column-8-layout tr td:nth-child(even){
+	border: 1px solid red;
+}
+
+.column-8-layout tr td:nth-child(even).max-col-5{
+	padding: 0 15px 0 5px;
+	width: 57px;
+	border: 1px solid red;
+}
+
+.column-8-layout tr td:nth-child(even).max-col-10{
+	padding: 0 15px 0 5px;
+	width: 115px;
+	border: 1px solid red;
+}
+
+.column-8-layout tr td:nth-child(even).max-col-15{
+	padding: 0 15px 0 5px;
+	width: 172px;
+	border: 1px solid red;
+}
+
+.column-8-layout tr td:nth-child(odd){
+	white-space:nowrap;
+	border: 1px solid red;
+}
+*/
+
+.field-width-3{
+	width: 55px;
+}
+
+.field-width-1{
+	width: 35px;
+}
+
+.field-width-0{
+	width: 19px;
+}
+
+.field-max-width-5{
+	width: 100%;
+	max-width: 57px;
+}
+
+.field-max-width-10{
+	width: 100%;
+	max-width: 115px;
+}
+
+.field-max-width-15{
+	width: 100%;
+	max-width: 172px;
+}
+
+.field-max-width-20{
+	width: 100%;
+	max-width: 230px;
+	/* >position list definitions >position list definitions detail ==> anders valt padding en border buiten de max-width en krijgen we overlap */
+	box-sizing: border-box;
+}
+
+.field-max-width-25{
+	width: 100%;
+	max-width: 287px;
+}
+
+.field-max-width-30{
+	width: 100%;
+	max-width: 345px;
+}
+
+.field-max-width-35{
+	width: 100%;
+	max-width: 402px;
+}
+
+.field-max-width-40{
+	width: 100%;
+	max-width: 460px;
+}
+
+.field-max-width-45{
+	width: 100%;
+	max-width: 517px;
+}
+
+.radioButtonSpacer{
+	padding: 0 15px 0 0;
+}
+
+.disableRow{
+	background-color:#CCC;
+}
+
+.fillTab{
+	padding: 0 !important;
+	width: 100% !important;
+	
+}
+
+.tundra .dojoxFloatingPaneTitle{
+	background: rgba(228, 226, 226, 0.8);
+}
+
+.dojoxFloatingPaneFg .dojoxFloatingPaneTitle{
+	background: #fafafa url("../../dojo/dijit/themes/tundra/images/titleBarBg.gif") repeat-x bottom left;
+  border: 1px solid #bfbfbf;
+  color: #000;
+}
+
+.customButtonsContainer{
+	float: right !important;
+}
+
+.customButtonsContainer button{
+	margin-left: 3px;
+}
+
+textarea{
+	font-family: 'Roboto Condensed';	
+}
+
+.two-controller-layout{
+	height: 0;
+  display: table-row;
+}
+
+.dojoxGridView{
+	height:100% !important;
+	width:100% !important;
+}
+
+.dojoxGridMasterView{
+	height: calc(100% - 22px) !important;
+}
+
+.dojoxGridScrollbox{
+	height:100% !important;
+}
+
+.tundra .dojoxGrid{
+	height: 100% !important;
+}

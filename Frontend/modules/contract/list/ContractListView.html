@@ -1,0 +1,53 @@
+<div class="wrapper" data-dojo-attach-event="onkeyup:handleKeys" data-dojo-attach-point="containerNode">
+	<div class="widgetContainer">
+		<div class="search-criteria" data-dojo-type="custom.CustomMenuItem" data-dojo-props="title: LANGUAGE.SEARCH_CRITERIA, toggleable: false" class="defaultDetailTitlePane">
+			<table>
+				<tr>
+					<td><label for="${id}searchctr_date_from" class="control-label col-xs-2">${i18n.CTR_DTE_FROM}</label></td>
+					<td><input data-dojo-type="dijit/form/DateTextBox" id="${id}searchctr_date_from" title="${i18n.CTR_DTE_FROM}" /></td>
+					
+					<td><label for="${id}searchctr_dte_to" class="control-label col-xs-2">${i18n.CTR_DTE_TO}</label></td>
+					<td><input data-dojo-type="dijit/form/DateTextBox" id="${id}searchctr_dte_to" title="${i18n.CTR_DTE_TO}" /></td>
+					
+					<td><label for="${id}searchpos_dte_from" class="control-label col-xs-2">${i18n.POS_DTE_FROM}</label></td>
+					<td><input data-dojo-type="dijit/form/DateTextBox" id="${id}searchpos_dte_from" title="${i18n.POS_DTE_FROM}" /></td>
+				</tr>
+				<tr>
+					<td><label for="${id}searchpursalind" class="control-label col-xs-2">${i18n.PURSALIND}</label></td>
+					<td><input data-dojo-type="custom.ComboBox" id="${id}searchpursalind" title="${i18n.PURSALIND}" data-dojo-props='store: COMBOBOX.getPuchase_sale_indValues(this, "searchpursalind")' maxlength="1" style="width: 15em;"  /></td>
+				</tr>
+			</table>		
+		</div>
+		<div class="listGrid">
+			<table id="${id}grid" data-dojo-type="custom.EnhancedTreeGrid">
+				<thead>
+					<tr>
+						<th field="poskey" relWidth="3">${i18n.CONTRACT}</th>
+						<th field="subcontract" aggregate="sum" itemAggregates="subContractCount,emptyValue, emptyValue,,,,,,emptyValue,emptyValue, emptyValue,emptyValue, emptyValue">
+							<table>
+								<thead>
+									<tr>
+										<th field="contract" relWidth="1" formatter="format.subContractCounter">${i18n.SUBCONTRACT}</th>
+										<th field="ctr_dte" relWidth="1">${i18n.CONTRACT_DATE}</th>
+										<th field="period_startdte" relWidth="1">${i18n.POSITION_DATE}</th>
+										<th field="total" relWidth="1" formatter="format.setRightPrecision">${i18n.TOTAL}</th>
+										<th field="delivered" relWidth="1" formatter="format.setRightPrecision">${i18n.DELIVERED}</th>
+										<th field="fixed" relWidth="1" formatter="format.setRightPrecision">${i18n.FIXED}</th>
+										<th field="released_qty" relWidth="1" formatter="format.setRightPrecision">${i18n.RELEASED}</th>
+										<th field="forward_qty" relWidth="1" formatter="format.setRightPrecision">${i18n.FORWARD}</th>
+										<th field="rel_id" relWidth="1">${i18n.RELID}</th>
+										<th field="pur_sal_ind" relWidth="1">${i18n.PURSALIND}</th>
+										<th field="ctr_no_supl_cust" relWidth="1">${i18n.CTR_NO_SUPL_CUST}</th>
+										<th field="cur_cd" relWidth="1">${i18n.CURCD}</th>
+										<th field="ctr_pric_mt" relWidth="1">${i18n.PRICE}</th>
+									</tr>
+								</thead>
+							</table>
+						</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+	<div data-dojo-type="custom.ListActionBar" id="${id}ListActionBar" data-dojo-props="variableAction:'${variableAction}', variableLabel:'${variableLabel}', parentId:'${id}', attachScope:this, deleteButtons:['newButton', 'variableButton']"></div>
+</div>

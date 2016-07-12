@@ -1,0 +1,57 @@
+<div class="wrapper" data-dojo-attach-event="onkeyup:handleKeys" data-dojo-attach-point="containerNode">
+	
+	<div class="listContainer"><div data-dojo-type="dijit/form/Form" id="${id}form" >
+		<div data-dojo-ty  pe="dijit/layout/TabContainer" style="width: 100%; height:252px;">
+		  <div data-dojo-type="dijit/layout/ContentPane" title="${i18n.GENERAL}" data-dojo-props="selected:true" tabindex="-1">
+		     <table class="column-layout" tabindex="-1">
+				<tr>
+					<td><label for="${id}LASTNAME">${i18n.LASTNAME}</label></td>
+							<td><input data-dojo-type="custom.ValidationTextBox"
+								id="${id}LASTNAME" class="field-max-width-45" required="true"
+								uppercase="false" maxlength="50"></td>
+				</tr>
+				
+				<tr>
+					<td><label for="${id}EMPLOYEENUMBER">${i18n.EMPLOYEENUMBER}</label></td>
+					<td><input data-dojo-type="custom.NumberTextBox"
+								id="${id}EMPLOYEENUMBER" class="field-max-width-15"
+								data-dojo-props="constraints:${constraint.DECIMAL_16_0}"
+								required="false" uppercase="false" maxlength="15"></td>
+				</tr>
+				
+				<tr>
+					<td><label for="${id}FIRSTNAME">${i18n.FIRSTNAME}</label></td>
+					<td><input data-dojo-type="custom.ValidationTextBox" id="${id}FIRSTNAME" class="field-max-width-45" required="true" uppercase="false" maxlength="50"/></td>
+				</tr>
+				
+				<tr>
+					<td><label for="${id}EXTENSION">${i18n.EXTENSION}</label></td>
+					<td><input data-dojo-type="custom.ValidationTextBox" id="${id}EXTENSION" class="field-max-width-45" required="true" uppercase="false" maxlength="50"/></td>
+				</tr>
+				
+				<tr>
+					<td><label for="${id}EMAIL">${i18n.EMAIL}</label></td>
+					<td><input data-dojo-type="custom.ValidationTextBox" id="${id}EMAIL" class="field-max-width-45" required="true" uppercase="false" maxlength="50"/></td>
+				</tr>
+				
+				<tr>
+					<td><label for="${id}OFFICECODE">${i18n.OFFICECODE}</label></td>
+					<td><select title="${i18n.OFFICECODE}" data-dojo-type="custom.FilteringSelect" class="field-max-width-45" id="${id}OFFICECODE" data-dojo-props="store: COMBOBOX.getOfficeComboValues(this, 'OFFICECODE'), maxLength:50"></select></td>
+					
+				</tr>
+				
+				<tr>
+					<td><label for="${id}REPORTSTO">${i18n.REPORTSTO}</label></td>
+					<td><input type="text" id="${id}REPORTSTO" class="field-max-width-45" value="" data-dojo-type="custom.LookupField" data-dojo-props='fields: [{source:"REPORTSTO", column:"EMPLOYEENUMBER", displayColumn:"LASTNAME"}], controller:"modules/employee/list/EmployeeListController", mainControllerId:"${id}", width: "1220px", height: "800px", title:{title:"${i18n.REPORTSTO}"}'></td>
+				</tr>
+				
+				<tr>
+					<td><label for="${id}JOBTITLE">${i18n.JOBTITLE}</label></td>
+					<td><input data-dojo-type="custom.ValidationTextBox" id="${id}JOBTITLE" class="field-max-width-45" required="true" uppercase="false" maxlength="50"/></td>
+				</tr>			
+			</table>
+		  </div>
+	  </div>
+  </div>
+  </div><div data-dojo-type="custom.DetailActionBar" data-dojo-props="parentId:'${id}', attachScope:this"></div>
+</div>

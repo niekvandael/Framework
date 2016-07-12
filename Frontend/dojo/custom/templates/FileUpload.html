@@ -1,0 +1,23 @@
+<div>
+  <fieldset>
+    <legend>${label}</legend>
+		<table>
+			<tr>
+				<td>
+					<a class="customButton" href="" id="${parentId}downloadButton" download>Download</button>
+				</td>
+				<td>
+					<label class="custom-file-input file-blue" data-dojo-attach-event="onchange:fileChoosen">
+						<input type="file" accept="application/pdf" id="${parentId}uploadButton">
+					</label>
+				</td>
+				<td>
+					<img  style="display:inline" class="loader" id="${parentId}loader" src="../images/loader.gif" style="visibility: hidden;">
+					<img  style="display:inline" class="loader" id="${parentId}success" src="../images/success.png" style="visibility: hidden;">
+					<img  style="display:inline" class="loader" id="${parentId}error" src="../images/error.png" style="visibility: hidden;">
+				</td>
+			</tr>
+		</table>
+	 
+	 </fieldset>
+</div>

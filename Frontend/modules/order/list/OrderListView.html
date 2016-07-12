@@ -1,0 +1,29 @@
+<div class="wrapper" data-dojo-attach-event="onkeyup:handleKeys" data-dojo-attach-point="containerNode" style="background-color:rgb(231, 238, 246)">
+	<div class="widgetContainer">
+		<div data-dojo-type="dijit/Menu" data-dojo-props="'id' : '${id}grid.menuItems'" style="display: none;">
+			<div data-dojo-type="dijit/MenuItem" data-dojo-attach-event="click:openOrderDetail">${i18n.ORDER_DETAIL}</div>
+			<div data-dojo-type="dijit/MenuSeparator"></div>
+			<div data-dojo-type="dijit/MenuItem" data-dojo-attach-event="click:exportCSV">${i18n.EXPORT_CSV}</div>
+		</div>
+		<div id="${id}graphics">
+		</div>
+		<div class="listGrid">
+			<table id="${id}grid" data-dojo-type="custom.EnhancedGrid" data-dojo-props="plugins:{filter:false, menus:{rowMenu:'${id}grid.menuItems'}}">
+				<thead>
+					<tr>
+						<th formatter="format.defaultTextFormatter" 	field="ORDERNUMBER" width="15%">${i18n.ORDERNUMBER}</th>
+						<th formatter="format.defaultTextFormatter" 	field="ORDERDATE" width="15%">${i18n.ORDERDATE}</th>
+						<th formatter="format.defaultTextFormatter" 	field="REQUIREDDATE" width="15%">${i18n.REQUIREDDATE}</th>
+						<th formatter="format.defaultTextFormatter" 	field="SHIPPEDDATE" width="15%">${i18n.SHIPPEDDATE}</th>
+						<th formatter="format.defaultTextFormatter" 	field="STATUS" width="15%">${i18n.STATUS}</th>
+						<th formatter="format.defaultTextFormatter" 	field="COMMENTS" width="15%">${i18n.COMMENTS}</th>
+						<th formatter="format.defaultTextFormatter" 	field="CUSTOMERNAME" width="15%">${i18n.CUSTOMER}</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+	
+	
+	<div data-dojo-type="custom.ListActionBar" data-dojo-props="variableAction:'${variableAction}', variableLabel:'${variableLabel}', parentId:'${id}', attachScope:this"></div>
+</div>

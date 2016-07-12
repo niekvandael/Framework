@@ -1,0 +1,46 @@
+<div class="wrapper" data-dojo-attach-event="onkeyup:handleKeys" data-dojo-attach-point="containerNode" style="background-color:rgb(231, 238, 246)">
+	<div class="widgetContainer">
+		<div class="search-criteria" data-dojo-type="custom.CustomMenuItem" data-dojo-props="title: LANGUAGE.SEARCH_CRITERIA, toggleable: false" class="defaultDetailTitlePane">
+			<table class="column-layout">
+				<tr>
+					<td><label for="${id}LASTNAME">${i18n.LASTNAME}</label></td>
+					<td class="max-col-20"><input data-dojo-type="custom.ValidationTextBox" id="${id}searchLASTNAME" class="field-width-20" title="${i18n.LASTNAME}" data-dojo-props="maxLength:50, required:false" /></td>
+					<td><label for="${id}searchFIRSTNAME">${i18n.FIRSTNAME}</label></td>
+					<td class="max-col-20"><input data-dojo-type="custom.ValidationTextBox" id="${id}searchFIRSTNAME" class="field-width-20" title="${i18n.FIRSTNAME}" data-dojo-props="maxLength:50, required:false" /></td>
+				</tr>
+			</table>		
+		</div>
+		
+		<div data-dojo-type="dijit/Menu" data-dojo-props="'id' : '${id}grid.menuItems'" style="display: none;">
+			<div data-dojo-type="dijit/MenuItem" data-dojo-attach-event="click:openEmployeeDetail">${i18n.EMPLOYEE_DETAIL}</div>
+			<div data-dojo-type="dijit/MenuItem" data-dojo-attach-event="click:openOrders">${i18n.SHOW_ORDERS}</div>
+			<div data-dojo-type="dijit/MenuSeparator"></div>
+			<div data-dojo-type="dijit/MenuItem" data-dojo-attach-event="click:exportCSV">${i18n.EXPORT_CSV}</div>
+		</div>
+		<div id="${id}graphics">
+			<h2>Employees per office</h2>
+			<div id="${id}candleSticksChart" style="width: 30%; height: 200px; display: inline-block"></div>
+			<div id="${id}legend1" style="width: 30%; height: 200px; display: inline-block"></div>
+			
+			<div id="${id}pieChart" style="width: 20%; height: 200px; display: inline-block"></div>
+			<div id="${id}legend2" style="width: 10%; height: 200px; display: inline-block"></div>
+		</div>
+		<div class="listGrid">
+			<table id="${id}grid" data-dojo-type="custom.EnhancedGrid" data-dojo-props="plugins:{filter:false, menus:{rowMenu:'${id}grid.menuItems'}}">
+				<thead>
+					<tr">
+						<th formatter="format.defaultTextFormatter" 	field="EMPLOYEENUMBER" width="6%">${i18n.ID}</th>
+						<th formatter="format.textFormatter" 			field="LASTNAME" width="6%">${i18n.LASTNAME}</th>
+						<th formatter="format.statusFormatter" 			field="FIRSTNAME" width="6%">${i18n.FIRSTNAME}</th>
+						<th formatter="format.defaultTextFormatter" 	field="OFFICECITY" width="6%">${i18n.OFFICE}</th>
+						<th formatter="format.defaultTextFormatter" 	field="EMAIL" width="6%">${i18n.EMAIL}</th>
+						<th formatter="format.defaultTextFormatter" 	field="JOBTITLE" width="6%">${i18n.JOBTITLE}</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+	
+	
+	<div data-dojo-type="custom.ListActionBar" data-dojo-props="variableAction:'${variableAction}', variableLabel:'${variableLabel}', parentId:'${id}', attachScope:this"></div>
+</div>

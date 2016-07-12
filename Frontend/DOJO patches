@@ -1,0 +1,29 @@
+DOJO patches 
+
+EnhancedGrid - CTRL + space to select line
+file: /dojox/grid/enhanced/_FocusManager.js
+function: _onContentKeyDown
+if (!e.ctrlKey)
+g.onRowClick(e);
+
+DataGrid - Editable grid hold focus
+file: /dojox/grid/DataGrid.js
+remove following code: if(_4c3){this.grid.updateRow(r);}
+
+TitlePane - Hover effect custom menuitems
+file: /dijit/TitlePane.js
+line 4 : add enableHover:false as property
+line 9 : replace if(this.toggleable){ with if(this.enableHover || this.toggleable){
+
+TitlePane - Resize children on TitlePane click
+file /dijit/TitlePane.js
+line 3: Add "dijit/registry" and registry
+line 87: After this.toggle() add setTimeout(function(){registry.byId('mainTabContainer').resize();},500);
+
+DataGrid - Select row on right click
+file /dojox/grid/DataGrid.js
+line 2930 - Add var len = e.grid.selection.getSelected().length; if (len < 2){this.onRowClick(e);}
+
+FloatingPane - Width calculations are wrong
+file /dojox/layout/FloatingPane.js
+line 20-22 Remove | else{this.domNode.style.width=_c.getMarginBox(this.domNode).w+"px";}

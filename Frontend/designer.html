@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Designer - by Guy Theuws</title>
+	<meta charset="utf-8">
+	<style>
+		@import url("dojo/dojo/resources/dojo.css");
+		@import url("dojo/dojo/resources/dnd.css");
+		/* Copyright (c) 2008 SitePen, Inc. All Rights Reserved */
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	border-top: 10px solid #5bbdea;
+	width: 800px;
+}
+
+#toggle {
+	text-align: right;
+	font-size: .85em;
+	margin-top: .5em;
+}
+
+#store {
+	padding: 1em 2em 1em 1em;
+}
+
+#footer {
+	clear: both;
+	padding: 2em .5em .5em .5em;
+	background: url("images/footer.png") repeat-x bottom left;
+	line-height: 3.6em;
+	font-size: 0.85em;
+	color: #888;
+}
+
+#sitepen {
+	float: right;
+}
+
+#sitepen img {
+	border: 0;
+}
+
+h1 {
+	text-indent: -9999em;
+	width: 800px;
+	height: 0;
+	padding: 160px 0 0 0;
+	margin: 0;
+	background: url("images/header-2.png") no-repeat 0 0;
+}
+
+h2 {
+	margin: 0 0 0 1em;
+	line-height: 2em;
+}
+
+ol, ul, div {
+	margin: 0;
+}
+
+.container {
+	border:1px solid #aaa;
+	padding: 1em;
+	cursor: default;
+	background:#fff;
+}
+
+.wishlistContainer, .catalogContainer, .cartContainer {
+	float: left;
+	margin-right: 20px;
+	width: 233px;
+}
+
+.catalogContainer ul {
+	height: 300px;
+}
+
+.cartContainer ol {
+	background: url("images/cart.jpg") no-repeat -20px 60px;
+	height: 300px;
+}
+
+.wishlistContainer ol {
+	background: url("images/clipboard.jpg") no-repeat -30px 0;
+	height: 300px;
+}
+
+.catalogContainer .inStock {
+	padding-left: 18px;
+	background-image: url("images/inStock.png");
+	background-repeat: no-repeat;
+	background-position: 0 7px;
+}
+
+.catalogContainer .outOfStock {
+	padding-left: 18px;
+	background-image: url("images/outOfStock.png");
+	background-repeat: no-repeat;
+	background-position: 0 7px;
+}
+
+.instructions {
+	clear: both;
+	padding-top: 2em;
+}
+
+.details {
+	padding-top: 1em;
+	clear: both;
+}
+
+#catalogNode {
+	list-style: none;
+}
+
+#cartNode, #wishlistNode {
+	padding: 1em 3em;
+}
+		/* Copyright (c) 2008 SitePen Inc. All rights reserved. */
+
+/* based on dojo svn trunk/dojo/tests/dnd/dndDefault.css */
+
+/*
+
+	there are basically all the classes you can set
+	for the various dojo.dnd states and elements in
+	their simplest form. hacking welcome.
+
+*/
+
+.dojoDndItem {
+	padding:3px;
+}
+
+.dojoDndItemOver {
+	background-color: #ededed;
+	cursor:pointer;
+}
+
+.dojoDndItemSelected {
+	background-color: #5bbdea; color: #444;
+}
+
+.dojoDndItemAnchor {
+	background-color: #5bbdea; color: black;
+}
+
+.dojoDndItemOver .dojoDndItemSelected {
+	background-color: #ededed;
+}
+
+.dojoDndItemOver .dojoDndItemAnchor {
+	background-color: #ededed;
+}
+
+.dojoDndItemBefore, .dojoDndItemBefore > td {
+	border-top: 2px solid #369;
+}
+
+.dojoDndItemAfter, .dojoDndItemAfter > td {
+	border-bottom: 2px solid #369;
+}
+
+.dojoDndAvatar {
+	border:2px solid #ccc;
+}
+
+.dojoDndAvatarHeader {
+	background-color: #aaa;
+}
+
+.dojoDndAvatarItem {
+	background-color: #fff;
+	border-bottom:1px solid #666;
+}
+
+.dojoDndAvatarItem .itemText {
+	font-size: 120%;
+}
+
+		
+	</style>
+	<script data-dojo-config="async: 1" src="dojo/dojo/dojo.js"></script>
+</head>
+<body id="demo2">
+
+	<div id="store">
+		<div class="catalogContainer">
+			<h2>Widgets</h2>
+			<ul data-dojo-type="dojo/dnd/Source" data-dojo-props="accept: [ 'inStock', 'outOfStock' ]" id="catalogNode" class="container">
+				<li class="dojoDndItem inStock" dndType="widget">ValidationTextBox</li>
+				<li class="dojoDndItem inStock" dndType="widget">NumberTextBox</li>
+				<li class="dojoDndItem inStock" dndType="widget">TabContainer</li>
+				<li class="dojoDndItem inStock" dndType="widget">FilteringSelect</li>
+				<li class="dojoDndItem inStock" dndType="widget">ComboBox</li>
+				<li class="dojoDndItem inStock" dndType="widget">EnhancedGrid</li>
+			</ul>
+		</div>
+
+		<div class="cartContainer">
+			<h2>Layout</h2>
+			<ol data-dojo-type="dojo/dnd/Source" data-dojo-props="accept: [ 'widget' ]" id="layoutNode" class="container">
+			</ol>
+		</div>
+	</div>
+<script>
+require(["dojo/on", "dojo/dom", 'dojo/dnd/Source', 'dojo/parser', "dojo/domReady!"], function(on, registry, Source, parser){
+	var target = registry.byId('layoutNode');
+	
+	on(registry.byId('layoutNode'), "onDndDrop", function(e){
+		console.log('mooi');
+	});
+	
+	parser.parse();
+});
+</script>
+</body>
+</html>

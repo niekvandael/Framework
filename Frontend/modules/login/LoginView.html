@@ -1,0 +1,19 @@
+<div style="width: 300px; height: 135px;"">
+	<form>
+	<table style="width: 100%;">
+		<tr>
+			<td><input type="text" style="width: 100%;" autocomplete="username" data-dojo-props="selectOnClick: true, uppercase: true" data-dojo-attach-event='keyup:handleKeys' placeholder="${i18n.LOGIN_LABEL_USERNAME}" data-dojo-attach-point="username" data-dojo-type="custom.ValidationTextBox" required="required" /></td>
+		</tr>
+		<tr>
+			<td><input type="password" style="width: 100%;" autocomplete="password" data-dojo-props="selectOnClick: true" placeholder="${i18n.LOGIN_LABEL_PASSWORD}" data-dojo-attach-event='keyup:handleKeys' data-dojo-attach-point="password" data-dojo-type="custom.ValidationTextBox" required="required" /></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><button data-dojo-attach-point="loginButton" data-dojo-attach-event='onclick:loginAction, onkeyup:handleKeys' id="loginButton">${i18n.LOGIN}</button></td>
+		</tr>
+	</table>
+	</form>
+	<div class="messageBar">
+		<img class="loader" id="${id}loader" style="margin: 0; margin-top: -2px; visibility: hidden;" src="../images/loader.gif" />
+		<span id="${id}pageInformation" class="pageInformation">&nbsp;</span>
+	</div>
+</div>

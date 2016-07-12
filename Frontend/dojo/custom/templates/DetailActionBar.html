@@ -1,0 +1,18 @@
+<div class="footer">
+  <div class="actionBar" id="${parentId}DetailActionBar">
+  	<div>
+			<button id="${parentId}checkButton" data-dojo-attach-point="checkButton" data-dojo-attach-event='onclick:checkAction' onclick="return false;">${i18n.CHECK}</button>
+			<button id="${parentId}newButton" data-dojo-attach-point="newButton" data-dojo-attach-event='onclick:newAction' onclick="return false;">${i18n.NEW}</button>
+			<button id="${parentId}saveButton" data-dojo-attach-point="saveButton" data-dojo-attach-event='onclick:saveAction' onclick="return false;">${i18n.SAVE}</button>
+			<button id="${parentId}deleteButton" data-dojo-attach-point="deleteButton" data-dojo-attach-event='onclick:deleteAction' onclick="return false;">${i18n.DELETE}</button>
+			<button id="${parentId}saveSettingsButton" data-dojo-attach-point="settingsButton" data-dojo-attach-event='onclick:saveSettings' onclick="return false;">${i18n.SAVE_SETTINGS}</button>
+			<div id="${parentId}customButtonsContainer" class="customButtonsContainer"></div>
+	</div>
+	<div>
+		<img class="loader" id="${parentId}loader" src="../images/loader.gif">
+	</div>
+</div>
+	<div class="messageBar">
+		<span id="${parentId}pageInformation" class="pageInformation">&nbsp;</span>
+	</div>
+</div>

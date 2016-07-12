@@ -1,0 +1,28 @@
+<div class="wrapper" data-dojo-attach-event="onkeyup:handleKeys" data-dojo-attach-point="containerNode" style="background-color:rgb(231, 238, 246)">
+	<div class="widgetContainer">
+		<div data-dojo-type="dijit/Menu" data-dojo-props="'id' : '${id}grid.menuItems'" style="display: none;">
+			<div data-dojo-type="dijit/MenuItem" data-dojo-attach-event="click:openProductDetail">${i18n.PRODUCT_DETAIL}</div>
+			<div data-dojo-type="dijit/MenuSeparator"></div>
+			<div data-dojo-type="dijit/MenuItem" data-dojo-attach-event="click:exportCSV">${i18n.EXPORT_CSV}</div>
+		</div>
+
+		<div class="listGrid">
+			<table id="${id}grid" data-dojo-type="custom.EnhancedGrid" data-dojo-props="plugins:{filter:false, menus:{rowMenu:'${id}grid.menuItems'}}">
+				<thead>
+					<tr>
+						<th formatter="format.defaultTextFormatter" 	field="PRODUCTCODE" width="15%">${i18n.PRODUCTCODE}</th>
+						<th formatter="format.defaultTextFormatter" 	field="PRODUCTNAME" width="15%">${i18n.PRODUCTNAME}</th>
+						<th formatter="format.defaultTextFormatter" 	field="PRODUCTLINE" width="15%">${i18n.PRODUCTLINE}</th>
+						<th formatter="format.defaultTextFormatter" 	field="PRODUCTSCALE" width="15%">${i18n.PRODUCTSCALE}</th>
+						<th formatter="format.defaultTextFormatter" 	field="PRODUCTVENDOR" width="15%">${i18n.PRODUCTVENDOR}</th>
+						<th formatter="format.defaultTextFormatter" 	field="PRODUCTDESCRIPTION" width="15%">${i18n.PRODUCTDESCRIPTION}</th>
+						<th formatter="format.numberFormatter_2" 		field="QUANTITYINSTOCK" width="15%">${i18n.QUANTITYINSTOCK}</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+	
+	
+	<div data-dojo-type="custom.ListActionBar" data-dojo-props="variableAction:'${variableAction}', variableLabel:'${variableLabel}', parentId:'${id}', attachScope:this"></div>
+</div>

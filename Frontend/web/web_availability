@@ -1,0 +1,12 @@
+# enable will get executed first to upload sources, disable will delete directories #
+enable 	/*
+disable modules/ctr/*
+disable modules/execut/*
+disable modules/finctrl/*
+disable modules/finoper/*
+disable modules/modules/forex/*
+disable modules/passwordchange/*
+disable modules/refer/*
+disable modules/register/*
+disable modules/third-party/*
+disable documentation/*
